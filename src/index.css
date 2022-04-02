@@ -39,6 +39,7 @@ ul {
 }
 
 /* utility ends*/
+
 .container {
   width: 70%;
   margin: 0 auto;
@@ -193,14 +194,12 @@ ul {
   }
 }
 
-@media screen and (max-width: 940px) {
-  .nav-left {
-    width: 85%;
-  }
-}
-
 @media screen and (max-width: 970px) {
+  .container {
+    width: 90%;
+  }
   .main-container {
+    padding: 10px;
     flex-direction: column;
     align-items: center;
   }
@@ -217,7 +216,16 @@ ul {
   }
 }
 
+@media screen and (max-width: 940px) {
+  .nav-left {
+    width: 85%;
+  }
+}
+
 @media screen and (max-width: 890px) {
+  .container {
+    width: 100%;
+  }
   .nav-left {
     width: 40%;
   }
