@@ -1,13 +1,261 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Overpass:wght@400;700&display=swap");
+
+*,
+::before,
+::after {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --primary-orange: hsl(26, 100%, 55%);
+  --primary-pale-orange: hsl(25, 100%, 94%);
+  --neutral-very-dark-blue: hsl(220, 13%, 13%);
+  --neutral-dark-grayish-blue: hsl(219, 9%, 45%);
+  --neutral-grayish-blue: hsl(220, 14%, 75%);
+  --neutral-light-grayish-blue: hsl(223, 64%, 98%);
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-black: hsl(0, 0%, 0%);
+}
+
+body {
+  font-size: 16px;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+/* utility starts*/
+
+.flex {
+  display: flex;
+}
+
+.flex-space-between {
+  justify-content: space-between;
+}
+
+/* utility ends*/
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.nav {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: antiquewhite;
+}
+
+.nav-left {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-menu {
+  display: none;
+  padding-top: 8px;
+}
+
+.nav-menu img {
+  width: 25px;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-link {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.profile-img {
+  width: 40px;
+  margin-left: 20px;
+}
+
+.main-container {
+  /* width: 80%; */
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-left,
+.main-right {
+  width: 45%;
+}
+
+.main-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.main-left > img {
+  /* width: 500px; */
+  width: 100%;
+}
+
+.thumbnails {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.thumbnails > img {
+  cursor: pointer;
+  width: 18%;
+}
+
+.thumbnails > img:active {
+  border: 1px solid blue;
+}
+
+.btn-card {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.count-btn-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.counter {
+  display: flex;
+  width: 45%;
+  cursor: pointer;
+}
+
+.counter > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter-items {
+  padding: 10px 20px;
+  background-color: rgb(191, 194, 197);
+  width: 33.33%;
+  border: 1px solid rgb(241, 241, 242);
+  /* cursor: pointer; */
+}
+
+.price {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.price p {
+  font-weight: 400;
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+.price span {
+  font-weight: 400;
+  font-size: 12px;
+  padding: 5px;
+  background-color: orange;
+  border-radius: 10px;
+  margin-left: 15px;
+}
+
+@media screen and (max-width: 1250px) {
+  .nav-left {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .nav-left {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .nav-left {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-left {
+    margin-bottom: 25px;
+  }
+  .main-left,
+  .main-right {
+    width: 90%;
+  }
+
+  .main-right-itmes {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .nav-left {
+    width: 40%;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-menu {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .nav-left {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .nav-left {
+    width: 60%;
+  }
+
+  .count-btn-container {
+    flex-direction: column;
+  }
+
+  .counter {
+    margin-bottom: 20px;
+  }
+
+  .counter,
+  .btn-card {
+    align-self: flex-start;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .nav-left-img {
+    display: none;
+  }
 }
