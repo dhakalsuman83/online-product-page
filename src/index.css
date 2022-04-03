@@ -82,6 +82,28 @@ ul {
   align-items: center;
   justify-content: end;
 }
+.nav-right  img {
+  cursor: pointer;
+}
+
+.badge-container {
+  position: relative;
+}
+.badge {
+  width: 22px;
+  height: 22px;
+  color: orange;
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  position: absolute;
+  top: -80%;
+  right: -40%;
+  border-radius: 50%;
+  background-color: rgb(60, 58, 58);
+}
 
 .profile-img {
   width: 40px;

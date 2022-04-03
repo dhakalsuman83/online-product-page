@@ -1,6 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-function Header() {
+function Header(props) {
+  const { cartItems } = props;
+  console.log(cartItems);
+
   return (
     <nav className="nav">
       <div className="nav-left">
@@ -34,11 +38,20 @@ function Header() {
         </ul>
       </div>
       <div className="nav-right">
-        <img
-          src={require("../../assets/images/icon-cart.svg").default}
-          alt="cart-logo"
-          className="nav-right-item cart-img"
-        />
+        <div className="nav-right-item badge-container">
+          <Link to="/cart">
+            <img
+              src={require("../../assets/images/icon-cart.svg").default}
+              alt="cart-logo"
+              className="cart-img"
+            />
+          </Link>
+
+          {cartItems.length !== 0 && (
+            <div className="badge">{cartItems.length}</div>
+          )}
+        </div>
+
         <img
           src={require("../../assets/images/image-avatar.png")}
           alt="profile-image"

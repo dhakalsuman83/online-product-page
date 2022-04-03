@@ -1,5 +1,6 @@
 const products = [
   {
+    id: 1,
     title: "Sneaker Company",
     mainTitle: "Fall Limited Edition Sneakers",
     description:

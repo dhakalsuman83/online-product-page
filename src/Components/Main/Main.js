@@ -1,7 +1,7 @@
 import React from "react";
 
 function Main(props) {
-  const { product, addition, substraction, count } = props;
+  const { product, addition, substraction, count, handleCart } = props;
 
   const [img, setImg] = React.useState(product.thumbnailArray[0].img);
 
@@ -49,7 +49,12 @@ function Main(props) {
               />
             </div>
           </div>
-          <button className="btn-card">
+          <button
+            className="btn-card"
+            onClick={() => {
+              handleCart(count, product);
+            }}
+          >
             <img
               src={require("../../assets/images/icon-cart.svg").default}
               alt="iconcart"
