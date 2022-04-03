@@ -49,8 +49,8 @@ function Header(props) {
               src={require("../../assets/images/icon-cart.svg").default}
               alt="cart-logo"
               className="cart-img"
-              onMouseOver={showCart}
-              onMouseOut={showCart}
+              onMouseDown={showCart}
+              // onMouseOut={showCart}
             />
           </Link>
 

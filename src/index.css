@@ -176,6 +176,13 @@ ul {
   padding: 8px;
   width: 90%;
   border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-checkout:hover {
+  background-color: var(--primary-pale-orange);
+  color: var(--primary-orange);
 }
 
 .main-container {
