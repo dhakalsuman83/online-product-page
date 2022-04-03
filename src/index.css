@@ -122,7 +122,7 @@ ul {
   background-color: antiquewhite;
   top: 105%;
   right: 0;
-  transition: all 2s ease;
+  /* transition: all 2s ease; */
   /* box-shadow: 2px 2px 0.5; */
 }
 
@@ -283,6 +283,9 @@ ul {
   .nav-left {
     width: 70%;
   }
+  .cart-hover {
+    width: 50%;
+  }
 }
 
 @media screen and (max-width: 1060px) {
@@ -357,10 +360,18 @@ ul {
   .btn-card {
     align-self: flex-start;
   }
+
+  .cart-hover {
+    width: 70%;
+  }
 }
 
 @media screen and (max-width: 490px) {
   .nav-left-img {
     display: none;
+  }
+
+  .cart-hover {
+    width: 90%;
   }
 }
