@@ -44,15 +44,13 @@ function Header(props) {
       </div>
       <div className="nav-right">
         <div className="nav-right-item badge-container">
-          <Link to="/cart">
-            <img
-              src={require("../../assets/images/icon-cart.svg").default}
-              alt="cart-logo"
-              className="cart-img"
-              onMouseDown={showCart}
-              // onMouseOut={showCart}
-            />
-          </Link>
+          <img
+            src={require("../../assets/images/icon-cart.svg").default}
+            alt="cart-logo"
+            className="cart-img"
+            onMouseDown={showCart}
+            // onMouseOut={showCart}
+          />
 
           {cartItems.length !== 0 && (
             <div className="badge">{cartItems.length}</div>
