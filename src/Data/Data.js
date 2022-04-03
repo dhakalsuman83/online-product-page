@@ -5,9 +5,9 @@ const products = [
     mainTitle: "Fall Limited Edition Sneakers",
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciuntiure ad labore rem dolor quaerat, est, voluptates fuga, sit ullamdoloremque hic voluptas perspiciatis consequuntur id amet voluptatibusipsum dolore.",
-    retailPrice: "$125.00",
-    discountPercent: "50%",
-    actualPrice: "$250.00",
+    retailPrice: 125,
+    discountPercent: 50,
+    actualPrice: 250,
     thumbnailArray: [
       {
         img: "image-product-1.jpg",

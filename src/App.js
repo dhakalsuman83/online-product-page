@@ -3,7 +3,6 @@ import "./App.css";
 import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
 import products from "./Data/Data";
-import { Routes, Route } from "react-router-dom";
 import Cart from "./Components/Cart/Cart";
 
 function App() {
@@ -42,22 +41,17 @@ function App() {
   return (
     <div className="container">
       <Header cartItems={cartItems} />
-      <Routes>
-        <Route
-          path="/online-product-page"
-          element={products.map((product, index) => (
-            <Main
-              key={index}
-              product={product}
-              addition={addition}
-              substraction={substraction}
-              count={count}
-              handleCart={handleCart}
-            />
-          ))}
+
+      {products.map((product, index) => (
+        <Main
+          key={index}
+          product={product}
+          addition={addition}
+          substraction={substraction}
+          count={count}
+          handleCart={handleCart}
         />
-        <Route path="/cart" element={<Cart cartItems={cartItems} />} />
-      </Routes>
+      ))}
     </div>
   );
 }

@@ -30,8 +30,8 @@ function Main(props) {
         <h1 className="main-right-itmes">{product.mainTitle}</h1>
         <p className="main-right-itmes">{product.description}</p>
         <div className="price main-right-itmes">
-          {product.retailPrice} <span>{product.discountPercent}</span>
-          <p className="actual-price">{product.actualPrice}</p>
+          ${product.retailPrice} <span>{product.discountPercent}%</span>
+          <p className="actual-price">${product.actualPrice}</p>
         </div>
         <div className="count-btn-container main-right-itmes">
           <div className="counter">
