@@ -5,11 +5,14 @@ function Header() {
     <nav className="nav">
       <div className="nav-left">
         <div className="nav-menu nav-left-items">
-          <img src="./assets/images/icon-menu.svg" alt="" />
+          <img
+            src={require("../../assets/images/icon-menu.svg").default}
+            alt="hamburger-menu"
+          />
         </div>
         <img
-          src="./assets/images/logo.svg"
-          alt=""
+          src={require("../../assets/images/logo.svg").default}
+          alt="logo"
           className="nav-left-img nav-left-items"
         />
         <ul className="nav-links nav-left-items">
@@ -32,13 +35,13 @@ function Header() {
       </div>
       <div className="nav-right">
         <img
-          src="./assets/images/icon-cart.svg"
+          src={require("../../assets/images/icon-cart.svg").default}
           alt="cart-logo"
           className="nav-right-item cart-img"
         />
         <img
-          src="./assets/images/image-avatar.png"
-          alt="profile-omage"
+          src={require("../../assets/images/image-avatar.png")}
+          alt="profile-image"
           className="nav-right-item profile-img"
         />
       </div>
