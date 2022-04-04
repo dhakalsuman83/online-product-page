@@ -52,7 +52,7 @@ function Main(props) {
           <button
             className="btn-card"
             onClick={() => {
-              handleCart(count, product);
+              handleCart(count, product, img);
             }}
           >
             <img

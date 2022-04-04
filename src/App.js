@@ -16,14 +16,17 @@ function App() {
     setCount((prevCount) => prevCount - 1);
   };
 
-  const handleCart = (count, product) => {
+  const handleCart = (count, product, img) => {
     if (cartItems.length !== 0) {
       const exist = cartItems.find((cartItem) => cartItem.id === product.id);
       if (exist) {
         setCartItems((preCartItems) => {
           return preCartItems.map((preCartItem) => {
             return preCartItem.id === product.id
-              ? { ...preCartItem, qty: preCartItem.qty + count }
+              ? {
+                  ...preCartItem,
+                  qty: preCartItem.qty + count,
+                }
               : preCartItem;
           });
         });
@@ -33,8 +36,10 @@ function App() {
           { ...product, qty: count },
         ]);
       }
+      setCount(1);
     } else {
       setCartItems([{ ...product, qty: count }]);
+      setCount(1);
     }
   };
 

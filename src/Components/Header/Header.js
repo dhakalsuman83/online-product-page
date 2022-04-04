@@ -3,20 +3,53 @@ import { Link } from "react-router-dom";
 
 function Header(props) {
   const [cartShow, setCartShow] = React.useState(false);
+  const [hamShow, setHamShow] = React.useState(false);
   const { cartItems } = props;
-  console.log(cartItems);
+  // console.log(cartItems);
 
   const showCart = () => {
     setCartShow(!cartShow);
   };
 
+  const handleHamMenu = () => {
+    setHamShow(!hamShow);
+  };
+
   return (
     <nav className="nav">
+      {hamShow && (
+        <div className="ham-menu">
+          <img
+            src={require("../../assets/images/icon-close.svg").default}
+            alt="cross"
+            className="ham-cross"
+            onClick={handleHamMenu}
+          />
+          <ul className="">
+            <li className="">
+              <a>Collections</a>
+            </li>
+            <li className="">
+              <a>Men</a>
+            </li>
+            <li className="">
+              <a>Women</a>
+            </li>
+            <li className="">
+              <a>About</a>
+            </li>
+            <li className="">
+              <a>Contact</a>
+            </li>
+          </ul>
+        </div>
+      )}
       <div className="nav-left">
         <div className="nav-menu nav-left-items">
           <img
             src={require("../../assets/images/icon-menu.svg").default}
             alt="hamburger-menu"
+            onClick={handleHamMenu}
           />
         </div>
         <img
@@ -93,12 +126,12 @@ function Header(props) {
                     </p>
                   </div>
                 </div>
-                <button className="btn-checkout">Checkout</button>
               </div>
             ))
           ) : (
             <div>Cart is empty</div>
           )}
+          <button className="btn-checkout">Checkout</button>
         </div>
       )}
     </nav>

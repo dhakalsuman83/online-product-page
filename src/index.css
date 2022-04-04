@@ -53,6 +53,43 @@ ul {
   background-color: antiquewhite;
 }
 
+.ham-menu {
+  padding: 10px;
+  border: 1px solid var(--neutral-white);
+  font-size: 20px;
+  font-weight: 700;
+  opacity: 0.95;
+  color: var(--neutral-black);
+  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 50%;
+  background-color: var(--primary-pale-orange);
+  transition: all 1s ease-in-out;
+}
+
+.ham-menu ul {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ham-menu ul li {
+  cursor: pointer;
+}
+
+.ham-cross {
+  cursor: pointer;
+  position: absolute;
+  width: 25px;
+  top: 2%;
+  right: 4%;
+}
+
 .nav-left {
   width: 60%;
   display: flex;
@@ -67,6 +104,7 @@ ul {
 
 .nav-menu img {
   width: 25px;
+  cursor: pointer;
 }
 
 .nav-links {
@@ -362,6 +400,10 @@ ul {
   }
 
   .cart-hover {
+    width: 70%;
+  }
+
+  .ham-menu {
     width: 70%;
   }
 }
