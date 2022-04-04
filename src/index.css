@@ -63,11 +63,15 @@ ul {
   position: relative;
   position: fixed;
   top: 0;
-  left: 0;
+  left: -100%;
   height: 100vh;
   width: 50%;
   background-color: var(--primary-pale-orange);
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.ham-menu.ham-open {
+  left: 0;
 }
 
 .ham-menu ul {

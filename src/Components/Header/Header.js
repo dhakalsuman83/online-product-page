@@ -17,33 +17,31 @@ function Header(props) {
 
   return (
     <nav className="nav">
-      {hamShow && (
-        <div className="ham-menu">
-          <img
-            src={require("../../assets/images/icon-close.svg").default}
-            alt="cross"
-            className="ham-cross"
-            onClick={handleHamMenu}
-          />
-          <ul className="">
-            <li className="">
-              <a>Collections</a>
-            </li>
-            <li className="">
-              <a>Men</a>
-            </li>
-            <li className="">
-              <a>Women</a>
-            </li>
-            <li className="">
-              <a>About</a>
-            </li>
-            <li className="">
-              <a>Contact</a>
-            </li>
-          </ul>
-        </div>
-      )}
+      <div className={`ham-menu${hamShow ? " ham-open" : ""}`}>
+        <img
+          src={require("../../assets/images/icon-close.svg").default}
+          alt="cross"
+          className="ham-cross"
+          onClick={handleHamMenu}
+        />
+        <ul className="">
+          <li className="">
+            <a>Collections</a>
+          </li>
+          <li className="">
+            <a>Men</a>
+          </li>
+          <li className="">
+            <a>Women</a>
+          </li>
+          <li className="">
+            <a>About</a>
+          </li>
+          <li className="">
+            <a>Contact</a>
+          </li>
+        </ul>
+      </div>
       <div className="nav-left">
         <div className="nav-menu nav-left-items">
           <img
