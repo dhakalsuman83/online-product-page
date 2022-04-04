@@ -75,7 +75,7 @@ ul {
 }
 
 .ham-menu ul {
-  height: 100%;
+  margin-top: 100px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -84,6 +84,7 @@ ul {
 
 .ham-menu ul li {
   cursor: pointer;
+  margin-bottom: 50px;
 }
 
 .ham-cross {
