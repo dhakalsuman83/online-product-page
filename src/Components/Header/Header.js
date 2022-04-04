@@ -131,7 +131,9 @@ function Header(props) {
           ) : (
             <div>Cart is empty</div>
           )}
-          <button className="btn-checkout">Checkout</button>
+          {cartItems.length !== 0 && (
+            <button className="btn-checkout">Checkout</button>
+          )}
         </div>
       )}
     </nav>
