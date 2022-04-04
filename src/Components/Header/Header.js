@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Header(props) {
   const [cartShow, setCartShow] = React.useState(false);
   const [hamShow, setHamShow] = React.useState(false);
-  const { cartItems } = props;
+  const { cartItems, onDelete } = props;
   // console.log(cartItems);
 
   const showCart = () => {
@@ -83,7 +83,7 @@ function Header(props) {
             // onMouseOut={showCart}
           />
 
-          {cartItems.length !== 0 && (
+          {cartItems && cartItems.length !== 0 && (
             <div className="badge">{cartItems.length}</div>
           )}
         </div>
@@ -99,7 +99,7 @@ function Header(props) {
           <h3>Cart</h3>
           <div className="divider"></div>
 
-          {cartItems.length != 0 ? (
+          {cartItems && cartItems.length != 0 ? (
             cartItems.map((cartItem, index) => (
               <div className="cart-details" key={index}>
                 <div className="cart-details-top">
@@ -123,13 +123,26 @@ function Header(props) {
                       </span>
                     </p>
                   </div>
+                  <div
+                    className="delete"
+                    onClick={() => {
+                      onDelete(index);
+                    }}
+                  >
+                    <img
+                      src={
+                        require("../../assets/images/icon-close.svg").default
+                      }
+                      alt="delete-icon"
+                    />
+                  </div>
                 </div>
               </div>
             ))
           ) : (
             <div>Cart is empty</div>
           )}
-          {cartItems.length !== 0 && (
+          {cartItems && cartItems.length !== 0 && (
             <button className="btn-checkout">Checkout</button>
           )}
         </div>

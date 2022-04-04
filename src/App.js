@@ -3,7 +3,7 @@ import "./App.css";
 import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
 import products from "./Data/Data";
-import Cart from "./Components/Cart/Cart";
+// import Cart from "./Components/Cart/Cart";
 
 function App() {
   const [count, setCount] = React.useState(1);
@@ -17,7 +17,7 @@ function App() {
   };
 
   const handleCart = (count, product, img) => {
-    if (cartItems.length !== 0) {
+    if (cartItems && cartItems.length !== 0) {
       const exist = cartItems.find((cartItem) => cartItem.id === product.id);
       if (exist) {
         setCartItems((preCartItems) => {
@@ -43,9 +43,16 @@ function App() {
     }
   };
 
+  const onDelete = (index) => {
+    console.log(index);
+    setCartItems((prevCartItems) => {
+      prevCartItems.splice(index, 1);
+    });
+  };
+
   return (
     <div className="container">
-      <Header cartItems={cartItems} />
+      <Header cartItems={cartItems} onDelete={onDelete} />
 
       {products.map((product, index) => (
         <Main
@@ -62,14 +69,3 @@ function App() {
 }
 
 export default App;
-
-// {products.map((product, index) => (
-//         <Main
-//           key={index}
-//           product={product}
-//           addition={addition}
-//           substraction={substraction}
-//           count={count}
-//           handleCart={handleCart}
-//         />
-//       ))}

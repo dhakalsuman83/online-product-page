@@ -198,7 +198,7 @@ ul {
 }
 
 .cart-details-top-details {
-  width: 75%;
+  width: 60%;
 }
 
 .cart-details-top-details-title {
@@ -210,6 +210,10 @@ ul {
 
 .cart-details-top-details span:last-child {
   font-weight: 700;
+}
+
+.delete {
+  cursor: pointer;
 }
 
 .btn-checkout {
