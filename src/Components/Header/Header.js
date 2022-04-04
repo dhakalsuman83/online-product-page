@@ -15,6 +15,23 @@ function Header(props) {
     setHamShow(!hamShow);
   };
 
+  // const clickOusideElement = (e) => {
+  //   debugger;
+  //   const container = e.target;
+  //   // console.log(container);
+  //   // console.log(container.closest(".cart-hover"));
+
+  //   let temp = container.closest(".cart-img");
+  //   // console.log(temp);
+  //   if (temp) {
+  //     setCartShow(!cartShow);
+  //   } else {
+  //     if (!container.closest(".cart-hover")) {
+  //       setCartShow(false);
+  //     }
+  //   }
+  // };
+
   return (
     <nav className="nav">
       <div className={`ham-menu${hamShow ? " ham-open" : ""}`}>
@@ -80,6 +97,7 @@ function Header(props) {
             alt="cart-logo"
             className="cart-img"
             onMouseDown={showCart}
+            // onClick={clickOusideElement}
             // onMouseOut={showCart}
           />
 

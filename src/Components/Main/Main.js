@@ -10,6 +10,7 @@ function Main(props) {
   const handleImg = (index) => {
     setImg(product.thumbnailArray[index].img);
   };
+
   return (
     <div className="main-container">
       <div className="main-left">

@@ -47,10 +47,13 @@ ul {
 
 .nav {
   position: relative;
+  position: sticky;
+  top: 0;
   padding: 20px;
   display: flex;
   justify-content: space-between;
   background-color: antiquewhite;
+  opacity: 0.95;
 }
 
 .ham-menu {
