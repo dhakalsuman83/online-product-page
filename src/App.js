@@ -44,7 +44,7 @@ function App() {
   };
 
   const onDelete = (index) => {
-    console.log(index);
+    // console.log(index);
     setCartItems((prevCartItems) => {
       prevCartItems.splice(index, 1);
     });
